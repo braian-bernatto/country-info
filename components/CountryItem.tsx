@@ -30,7 +30,7 @@ const CountryItem: React.FC<Props> = ({ name, emoji, code, buscar }) => {
       <div
         className={`${
           show ? '-translate-y-2' : 'h-0 -translate-y-6'
-        } bg-white opacity-90 transform w-full mx-2 rounded-md border text-xs p-3 flex flex-col gap-1 text-gray-800 font-semibold relative`}
+        } bg-white opacity-90 transition-transform duration-300 transform w-full mx-2 rounded-md border text-xs p-3 flex flex-col gap-1 text-gray-800 font-semibold relative`}
       >
         {show && <CountryDetail countryCode={code} />}
         <button
