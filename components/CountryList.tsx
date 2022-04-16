@@ -50,7 +50,9 @@ const CountryList: React.FC<Props> = ({ buscar }) => {
   const { countries } = data!
 
   return (
-    <ul className='flex flex-wrap items-start justify-between gap-9 mx-10 p-5 bg-gray-300 rounded-xl shadow-lg'>
+    <ul
+      className={`flex flex-wrap items-start justify-center sm:justify-between gap-9 mx-10 p-5 bg-gray-300 rounded-xl shadow-lg`}
+    >
       {countriesFiltered.map((country, i) => (
         <li key={i}>
           <CountryItem {...country} buscar={buscar} />
