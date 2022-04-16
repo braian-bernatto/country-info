@@ -53,11 +53,17 @@ const CountryList: React.FC<Props> = ({ buscar }) => {
     <ul
       className={`flex flex-wrap items-start justify-center sm:justify-between gap-9 mx-10 p-5 bg-gray-300 rounded-xl shadow-lg`}
     >
-      {countriesFiltered.map((country, i) => (
-        <li key={i}>
-          <CountryItem {...country} buscar={buscar} />
-        </li>
-      ))}
+      {countriesFiltered.length > 0 ? (
+        countriesFiltered.map((country, i) => (
+          <li key={i}>
+            <CountryItem {...country} buscar={buscar} />
+          </li>
+        ))
+      ) : (
+        <span className='text-gray-600 font-bold animate-pulse'>
+          No se encontraron resultados
+        </span>
+      )}
     </ul>
   )
 }

@@ -26,8 +26,8 @@ const Home: NextPage = () => {
         <CountryList buscar={buscar} />
       </main>
 
-      <footer className='mt-10 text-pink-500 font-bold'>
-        <p>Powered by Bernatto</p>
+      <footer className='mt-10 text-pink-500 font-bold text-xs'>
+        &copy; {new Date().getFullYear()} - Bernatto
       </footer>
     </div>
   )

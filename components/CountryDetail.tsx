@@ -67,9 +67,14 @@ const CountryDetail: React.FC<Props> = ({ countryCode }) => {
       <p className='bg-gray-200 px-2 py-1 rounded-md'>
         <span className='font-normal'>Capital:</span> {country.capital}
       </p>
-      <p className='bg-gray-200 px-2 py-1 rounded-md'>
-        <span className='font-normal'>Currency:</span> {country.currency}
-      </p>
+      <ul className='bg-gray-200 px-2 py-1 rounded-md flex flex-wrap justify-between items-center gap-1'>
+        <span className='font-normal'>Currency:</span>
+        {country.currency.split(',').map((item, index) => (
+          <li key={index} className='bg-white rounded-full px-2 shadow'>
+            {item}
+          </li>
+        ))}
+      </ul>
       <ul className='bg-gray-200 px-2 py-1 rounded-md flex flex-wrap justify-between items-center gap-1'>
         <span className='font-normal'>Languages:</span>{' '}
         {country.languages.map((language, index) => (
