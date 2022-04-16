@@ -24,7 +24,7 @@ const CountryItem: React.FC<Props> = ({ name, emoji, code, buscar }) => {
       <span className='absolute -top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl hover:scale-150 z-30'>
         {emoji}
       </span>
-      <div className='rounded-md py-1 px-3 text-gray-700 font-semibold border text-md shadow-lg cursor-pointer bg-white w-full h-16 flex items-center justify-center text-center z-20 relative'>
+      <div className='rounded-md py-1 px-3 text-gray-700 font-semibold border text-xs sm:text-md shadow-lg cursor-pointer bg-white w-full h-16 flex items-center justify-center text-center z-20 relative'>
         {name}
       </div>
       <div
